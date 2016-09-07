@@ -24,7 +24,7 @@ before_script:
   - php artisan migrate --env=testing #creates database table
   - php artisan db:seed # seeds database with seeders'
   - nohup php artisan serve &
-  - cat nohup.out
+  - sudo docker info
   - wget http://localhost:8000
 script:
   - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage
