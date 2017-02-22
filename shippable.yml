@@ -13,7 +13,6 @@ addons:
 before_script:
   - sudo apt-get update
   - composer self-update -n
-  - dsfdsfdsfdsfdsfdsafd
   - composer install  #downloads vendor
   - composer install --prefer-dist -n  # no idea
   - mysql -e "GRANT ALL ON *.* TO shippable@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"  #creating shippable user
