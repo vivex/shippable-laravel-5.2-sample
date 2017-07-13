@@ -15,6 +15,7 @@ before_script:
   - composer self-update -n
   - composer install  #downloads vendor
   - composer install --prefer-dist -n  # no idea
+  - mysql -e "CREATE USER 'shippable'@'localhost' IDENTIFIED BY '';"
   - mysql -e "GRANT ALL ON *.* TO shippable@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"  #creating shippable user
   - mysql -e "create database if not exists sample;" # create database
   - mysql -e "show databases;" # lists databases
