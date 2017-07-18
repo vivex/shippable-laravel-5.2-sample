@@ -29,6 +29,6 @@ before_script:
   - php artisan db:seed # seeds database with seeders'
   - nohup php artisan serve &
   - sudo docker info
-  - wget http://localhost:8000
+  #- wget http://localhost:8000
 script:
   - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage
