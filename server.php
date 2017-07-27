@@ -4,7 +4,7 @@
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
- * @author   Taylor Soni <taylorotwell@gmail.com>
+ * @author   Vivek Soni <taylorotwell@gmail.com>
  */
 
 $uri = urldecode(
