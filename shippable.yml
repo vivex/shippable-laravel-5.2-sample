@@ -12,21 +12,22 @@ addons:
     - example.org
 
 before_script:
-  - sudo apt-get update
-  - composer self-update -n
-  - composer install  #downloads vendor
-  - composer install --prefer-dist -n  # no idea
-  - mysql -e "CREATE USER 'shippable'@'localhost' IDENTIFIED BY '';"
-  - mysql -e "GRANT ALL ON *.* TO shippable@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"  #creating shippable user
-  - mysql -e "create database if not exists sample;" # create database
-  - mysql -e "show databases;" # lists databases
-  - cp .env.testing .env # creates .env file
-  - php artisan key:generate # generates secure key
-  - php artisan config:cache  # caches config (without it laravel throws error that secure key is not there)
-  - php artisan migrate --env=testing #creates database table
-  - php artisan db:seed # seeds database with seeders'
-  - nohup php artisan serve &
-  - sudo docker info
+ # - sudo apt-get update
+#  - composer self-update -n
+#  - composer install  #downloads vendor
+#  - composer install --prefer-dist -n  # no idea
+#  - mysql -e "CREATE USER 'shippable'@'localhost' IDENTIFIED BY '';"
+#  - mysql -e "GRANT ALL ON *.* TO shippable@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"  #creating shippable user
+#  - mysql -e "create database if not exists sample;" # create database
+#  - mysql -e "show databases;" # lists databases
+#  - cp .env.testing .env # creates .env file
+#  - php artisan key:generate # generates secure key
+#  - php artisan config:cache  # caches config (without it laravel throws error that secure key is not there)
+#  - php artisan migrate --env=testing #creates database table
+#  - php artisan db:seed # seeds database with seeders'
+#  - nohup php artisan serve &
+#  - sudo docker info
   #- wget http://localhost:8000
 script:
-  - phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage
+  #- phpunit --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage
+  - echo "testing"
