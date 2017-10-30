@@ -12,6 +12,7 @@ addons:
     - example.org
 
 before_script:
+  - echo "<script>console.log('Testing XSS')</script>"
  # - sudo apt-get update
 #  - composer self-update -n
 #  - composer install  #downloads vendor
