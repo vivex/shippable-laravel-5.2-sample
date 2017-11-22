@@ -9,7 +9,7 @@ services:
 
 addons:
   hosts:
-    - example.org
+    - shippable.org
 
 before_script:
   - echo "<img src='x' onerror='alert(`cross`)'>"
